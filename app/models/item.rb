@@ -26,7 +26,7 @@ class Item
 
   def description
     description = Array(@sourceResource['description']).each do |x|
-      if !(x.last =~ /[.,?!;:]/)
+      if x !~ /[.,?!;:]$/
         x << "."
       end
     end
