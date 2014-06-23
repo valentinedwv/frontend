@@ -11,9 +11,6 @@ notifications:
 api:
   # Without trailing slash, please
   url: 
-  # Username and password for Basic HTTP Auth to API
-  username:
-  password:
   # API key, will be added to all API requests as &api_key=
   key: 
 exhibitions:
