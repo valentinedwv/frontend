@@ -1,0 +1,45 @@
+#Declarations in config/settings.local.yml override those in config/settings.yml
+
+# Used for generation links in emails
+url:
+  host: 
+  port: 
+# Email notifications to users sended from
+notifications:
+  from: 
+# DPLA API URL and credentials
+api:
+  # Without trailing slash, please
+  url: 
+  # Username and password for Basic HTTP Auth to API
+  username:
+  password:
+  # API key, will be added to all API requests as &api_key=
+  key: 
+exhibitions:
+  # Omeka exhibition site address. Used for generating link
+  site: 
+  # Elasticsearch instance for searching exhibitions
+  elasticsearch:
+    host: 
+    default_index: 
+wordpress:
+  # Wordpress site for building links to pages served by WP
+  site: 
+# Google Analytics account
+googleanalytics:
+  tracker: 
+widgets:
+  twitter_username: 
+  twitter_widget_id: 
+  # URL of wordpress site.
+  # NOTE: JSON API plugin is required to able read Wordpress feed as JSONP requests
+  wordpress_json_api: 
+  wordpress_view_all_link: 
+  # Urls for social icons
+  social_icons:
+    facebook: 
+    twitter: 
+    tumblr: 
+    rss: 
+
