@@ -1,17 +1,8 @@
-#Use this file to define variables related to application configuration
-#This file is TRACKED in git and is NOT PRIVATE
+#Use this file to define settings related to application configuration
+#Use this file to define settings that are UNIVERSAL (not specific to any environment)
+#Information in this file will be PUBLIC (this file is tracked in git)
 #Declarations in config/settings.local.yml override declarations in this file
 
-session:
-  # Name of cookie indicator is user signed in or not
-  # Useful for serving cached pages for guest users
-  logged_in_flag: _dpla_no_cache
-  # Store settings. cookie_store and dalli_store are available
-  store: cookie_store
-  key: _dpla_frontend
-  # Settings for memcache sessions
-  dalli_store:
-    memcache_server:
 # User interface tweaks
 ui:
   # Items

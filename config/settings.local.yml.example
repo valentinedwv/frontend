@@ -1,6 +1,7 @@
-#Use config/settings.local.yml to define variables related to application configuration
-#config/settings.local.yml is IGNORED in git and is PRIVATE
-#Declarations in config/settings.local.yml override declarations in config/settings.yml
+#Use this file to define settings related to application configuration
+#Use this file to define settings that are ENVIRONMENT SPECIFIC and/or PRIVATE
+#This file will be ignored by git
+#Declarations in this file override declarations in config/settings.yml
 
 # Used for generation links in emails
 url:
@@ -29,6 +30,17 @@ wordpress:
 # Google Analytics account
 googleanalytics:
   tracker: 
+# Session settings
+session:
+  # Name of cookie indicator is user signed in or not
+  # Useful for serving cached pages for guest users
+  logged_in_flag: 
+  # Store settings. cookie_store and dalli_store are available
+  store: 
+  key:
+  # Settings for memcache sessions
+  dalli_store:
+    memcache_server:
 widgets:
   twitter_username: 
   twitter_widget_id: 
