@@ -6,7 +6,7 @@
 url:
   host: 
   port: 
-# Email notifications to users sended from
+# Email notifications to users sent from
 notifications:
   from: 
 # DPLA API URL and credentials
@@ -24,6 +24,7 @@ exhibitions:
     default_index: 
 wordpress:
   # Wordpress site for building links to pages served by WP
+   # NOTE: JSON API plugin is required to able read Wordpress feed as JSONP requests
   site: 
 # Google Analytics account
 googleanalytics:
@@ -31,10 +32,6 @@ googleanalytics:
 widgets:
   twitter_username: 
   twitter_widget_id: 
-  # URL of wordpress site.
-  # NOTE: JSON API plugin is required to able read Wordpress feed as JSONP requests
-  wordpress_json_api: 
-  wordpress_view_all_link: 
   # Urls for social icons
   social_icons:
     facebook: 
