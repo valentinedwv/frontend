@@ -1,4 +1,6 @@
-#Declarations in config/settings.local.yml override those in config/settings.yml
+#Use config/settings.local.yml to define variables related to application configuration
+#config/settings.local.yml is IGNORED in git and is PRIVATE
+#Declarations in config/settings.local.yml override declarations in config/settings.yml
 
 # Used for generation links in emails
 url:

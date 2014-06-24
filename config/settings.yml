@@ -1,4 +1,6 @@
-#Declarations in config/settings.local.yml override those in config/settings.yml
+#Use this file to define variables related to application configuration
+#This file is TRACKED in git and is NOT PRIVATE
+#Declarations in config/settings.local.yml override declarations in this file
 
 session:
   # Name of cookie indicator is user signed in or not
