@@ -97,7 +97,7 @@ class Item
   end
 
   def data_provider    
-    unless @intermediateProvider.nil? do
+    unless @intermediateProvider.nil?
       return "#{@dataProvider}; #{@intermediateProvider}" 
     end
     @dataProvider
