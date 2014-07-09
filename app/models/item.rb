@@ -3,14 +3,15 @@ class Item
 
   def initialize(doc)
     doc = transform_dotted_keys doc
-    @id             = doc['id']
-    @sourceResource = doc['sourceResource'] || {}
-    @originalRecord = doc['originalRecord'] || {}
-    @object         = doc['object']
-    @isShownAt      = doc['isShownAt']
-    @dataProvider   = doc['dataProvider']
-    @provider       = doc['provider']['name'] if doc['provider']
-    @score          = doc['score']
+    @id                     = doc['id']
+    @sourceResource         = doc['sourceResource'] || {}
+    @originalRecord         = doc['originalRecord'] || {}
+    @object                 = doc['object']
+    @isShownAt              = doc['isShownAt']
+    @dataProvider           = doc['dataProvider']
+    @intermediateProvider   = doc['intermediateProvider'] 
+    @provider               = doc['provider']['name'] if doc['provider']
+    @score                  = doc['score']
     if @sourceResource['spatial'].present? and not @sourceResource['spatial'].is_a? Array
       @sourceResource['spatial'] = [ @sourceResource['spatial'] ]
     end
@@ -95,8 +96,15 @@ class Item
     @object
   end
 
-  def data_provider
+  def data_provider    
+    unless @intermediateProvider.nil? do
+      return "#{@dataProvider}; #{@intermediateProvider}" 
+    end
     @dataProvider
+  end
+
+  def intermediate_provider
+    @intermediateProvider
   end
 
   def provider
