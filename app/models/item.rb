@@ -9,7 +9,9 @@ class Item
     @object                 = doc['object']
     @isShownAt              = doc['isShownAt']
     @dataProvider           = doc['dataProvider']
-    @intermediateProvider   = doc['intermediateProvider'] 
+    @intermediateProvider   = doc['intermediateProvider']
+    @edmRights              = doc['rights']
+    @hasViewEdmRights       = doc['hasView']['edmRights'] if doc['hasView'] 
     @provider               = doc['provider']['name'] if doc['provider']
     @score                  = doc['score']
     if @sourceResource['spatial'].present? and not @sourceResource['spatial'].is_a? Array
@@ -48,6 +50,11 @@ class Item
 
   def rights
     @sourceResource['rights']
+  end
+
+  def standardized_rights_statement
+    #result = [@edmRights, @hasViewEdmRights].compact!.join("<br/>").html_safe 
+
   end
 
   def created_date
@@ -105,10 +112,7 @@ class Item
   end
 
   def contributing_institution 
-    unless @intermediateProvider.nil?
-     return "#{@dataProvider}<br/>#{@intermediateProvider}".html_safe
-    end
-    @dataProvider
+    [@dataProvider, @intermediateProvider].compact.join("<br/>").html_safe
   end
 
   def provider
