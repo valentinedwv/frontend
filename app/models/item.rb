@@ -97,14 +97,18 @@ class Item
   end
 
   def data_provider    
-    unless @intermediateProvider.nil?
-      return "#{@dataProvider}; #{@intermediateProvider}" 
-    end
     @dataProvider
   end
 
   def intermediate_provider
     @intermediateProvider
+  end
+
+  def contributing_institution 
+    unless @intermediateProvider.nil?
+     return "#{@dataProvider}<br/>#{@intermediateProvider}".html_safe
+    end
+    @dataProvider
   end
 
   def provider
