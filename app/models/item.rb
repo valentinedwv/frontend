@@ -102,14 +102,6 @@ class Item
     @object
   end
 
-  def data_provider    
-    @dataProvider
-  end
-
-  def intermediate_provider
-    @intermediateProvider
-  end
-
   def contributing_institution 
     [@dataProvider, @intermediateProvider].compact.join("<br/>").html_safe
   end
