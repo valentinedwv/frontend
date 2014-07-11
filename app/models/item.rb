@@ -53,8 +53,7 @@ class Item
   end
 
   def standardized_rights_statement
-    #result = [@edmRights, @hasViewEdmRights].compact!.join("<br/>").html_safe 
-
+    statement = [@edmRights, @hasViewEdmRights].compact.join("<br/>").html_safe 
   end
 
   def created_date
