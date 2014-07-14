@@ -53,7 +53,7 @@ class Item
   end
 
   def standardized_rights_statement
-    [@edmRights, @hasViewEdmRights].compact.join("<br/>").html_safe 
+    [@edmRights, @hasViewEdmRights].compact
   end
 
   def created_date
@@ -107,7 +107,7 @@ class Item
   end
 
   def contributing_institution 
-    [@dataProvider, @intermediateProvider].compact.join("<br/>".html_safe)
+    [@dataProvider, @intermediateProvider].compact
   end
 
   def provider
