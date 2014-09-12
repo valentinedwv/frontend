@@ -51,5 +51,5 @@ group :production do
 end
 
 group :dpla_branding do
-  gem 'dpla_frontend_assets', git: 'git@github.com:dpla/frontend-assets.git'
+  gem 'dpla_frontend_assets', :git => 'git@github.com:dpla/frontend-assets.git'
 end
